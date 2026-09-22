@@ -9,7 +9,6 @@ export async function check(answers: Answers) {
   const labels: string[] = [];
 
   if (category.choice === "none") {
-    return;
   } else if (category.choice === "bug") {
     labels.push(env.config.category.bug);
   } else if (category.choice === "documentation") {

@@ -4,16 +4,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "tsdown run src/index.ts",
-    "build": "tsdown",
-    "dev": "tsdown --watch"
+    "start": "tsx src/index.ts"
   },
-
   "packageManager": "pnpm@12.5.1",
-
   "devDependencies": {
     "@types/node": "^26.6.2",
-    "tsdown": "^0.22.5",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },
   "dependencies": {

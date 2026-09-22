@@ -1,0 +1,26 @@
+name: Labeling Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  execute-tsdown:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - uses: pnpm/setup@v3
+
+      - name: Run TypeScript Script
+        env:
+          JEV_TOKEN: ${{ secrets.JEV_TOKEN }}
+          APP_ID: ${{ secrets.APP_ID }}
+          APP_INSTALLATION_ID: ${{ secrets.APP_INSTALLATION_ID }}
+          APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+          GITHUB_REPO: ${{ github.event.repository.name }}
+          GITHUB_REPO_OWNER: ${{ github.repository_owner }}
+          GITHUB_ISSUE: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: pnpm start

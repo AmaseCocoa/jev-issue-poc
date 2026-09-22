@@ -1,0 +1,12 @@
+{
+    "priority": {
+        "low": "",
+        "middle": "",
+        "high": ""
+    },
+    "category": {
+        "bug": "bug",
+        "documentation": "documentation",
+        "features": "features"
+    }
+}

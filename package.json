@@ -8,6 +8,9 @@
     "build": "tsdown",
     "dev": "tsdown --watch"
   },
+
+  "packageManager": "pnpm@12.5.1",
+
   "devDependencies": {
     "@types/node": "^26.6.2",
     "tsdown": "^0.22.5",

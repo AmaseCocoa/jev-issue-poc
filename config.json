@@ -1,8 +1,8 @@
 {
     "priority": {
-        "low": "",
-        "middle": "",
-        "high": ""
+        "low": "priority: low",
+        "middle": "priority: middle",
+        "high": "priority: high"
     },
     "category": {
         "bug": "bug",

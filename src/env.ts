@@ -5,14 +5,14 @@ import rawConfig from '../config.json';
 const envSchema = z.object({
   JEV_TOKEN: z.string(),
 
-  APP_ID: z.number(),
-  APP_INSTALLATION_ID: z.number(),
+  APP_ID: z.coerce.number().int(),
+  APP_INSTALLATION_ID: z.coerce.number().int(),
   APP_PRIVATE_KEY: z.string(),
 
   GITHUB_REPO: z.string(),
   GITHUB_REPO_OWNER: z.string(),
 
-  GITHUB_ISSUE: z.number(),
+  GITHUB_ISSUE: z.coerce.number().int(),
 
   ISSUE_TITLE: z.string(),
   ISSUE_BODY: z.string(),

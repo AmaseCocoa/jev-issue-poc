@@ -3,6 +3,8 @@ import { z } from 'zod'
 import rawConfig from '../config.json';
 
 const envSchema = z.object({
+  ENABLED: z.enum(['true', 'false']).transform((value) => value === 'true').default(true),
+  
   JEV_TOKEN: z.string(),
 
   APP_ID: z.coerce.number().int(),
@@ -32,6 +34,8 @@ const envSchema = z.object({
 })
 
 const parsedEnv = envSchema.safeParse({
+  ENABLED: process.env.ENABLED,
+
   JEV_TOKEN: process.env.JEV_TOKEN,
 
   APP_ID: process.env.APP_ID,
